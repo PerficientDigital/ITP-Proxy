@@ -1,0 +1,2 @@
+tms.test.org    http://assets.adobedtm.com/
+track.test.org  http://test.sc.omtrdc.net/

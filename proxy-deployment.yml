@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itp-proxy-deployment
+  labels:
+    app: itp-proxy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: itp-proxy
+  template:
+    metadata:
+      labels:
+        app: itp-proxy
+    spec:
+      containers:
+      - name: itp-proxy
+        image: itp-proxy
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
